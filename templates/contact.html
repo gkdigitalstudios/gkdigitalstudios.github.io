@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+<section class="section section-pad">
+  <div class="container">
+
+    <!-- Contact Intro -->
+    <div class="reveal text-center">
+      <h1>Let’s Talk</h1>
+      <p>Tell us about your occasion and we’ll suggest the best plan for you.</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="reveal">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <div class="flash-stack">
+            {% for category, message in messages %}
+              <div class="flash {{ category }}">{{ message }}</div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+
+      <form method="POST" class="form card glass contact-form">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Map -->
+    <div class="reveal delay-1">
+      <div class="card glass map-card">
+        <iframe
+          title="GK Digital Studios Map"
+          src="https://www.google.com/maps?q=Sadhguru%20school%20road,%20main%20road,%20Kovvur,%20East%20godavari%20dist,%20Andhra%20Pradesh%20534350&z=16&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <!-- Poster -->
+    <div class="reveal delay-2">
+      <div class="card glass poster-card">
+        <h3 class="poster-title">GK Digital Studios – Services Poster</h3>
+        <a href="{{ url_for('static', filename='assets/gk-poster.png') }}" download class="btn btn-ghost" style="margin-bottom:10px;">
+          Download Poster
+        </a>
+        <img
+          src="{{ url_for('static', filename='assets/gk-poster.png') }}"
+          alt="GK Digital Studios Services Poster"
+          class="poster-img lightboxable"
+          loading="lazy" />
+        <small class="poster-hint">Tap/click the poster to view fullscreen</small>
+      </div>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="reveal delay-3 contact-bits text-center">
+      <p><strong>Address:</strong> Sadhguru school road, main road, Kovvur, East Godavari, Andhra Pradesh – 534350</p>
+      <p><strong>Email:</strong> <a href="mailto:gkdigitalstudios@gmail.com">gkdigitalstudios@gmail.com</a></p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/9491800783" target="_blank" rel="noopener">+91 94918 00783</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Close">×</button>
+  <img class="lightbox-img" alt="">
+</div>
+{% endblock %}

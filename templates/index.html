@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<!-- Hero with gradient + glass CTA -->
+<section class="hero section-pad">
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <h1><span class="accent">Preserving</span> Memories, <br/>Creating Stories</h1>
+      <p>Premium photography for weddings, haldi, receptions, birthdays, portraits, passport photos, and creative designs that keep loved ones close.</p>
+      <div class="hero-cta">
+        <a href="{{ url_for('services') }}" class="btn btn-primary">Explore Services</a>
+        <a href="{{ url_for('contact') }}" class="btn btn-ghost">Book a Session</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><span data-count="1200">0</span>+ Sessions</div>
+        <div class="stat"><span data-count="350">0</span>+ Weddings</div>
+        <div class="stat"><span data-count="98">0</span>% Happy Clients</div>
+      </div>
+    </div>
+    <div class="hero-media reveal delay-1">
+      <div class="hero-card glass">
+        <img src="https://picsum.photos/640/800?random=12" alt="Wedding portrait" />
+      </div>
+      <div class="hero-float glass">
+        <img src="https://picsum.photos/240/160?random=13" alt="Candid moment" />
+        <p>Authentic, candid, timeless.</p>
+      </div>
+    </div>
+  </div>
+  <div class="wave-divider"></div>
+</section>
+
+<!-- Highlights -->
+<section class="section section-pad">
+  <div class="container cards-3">
+    <div class="card glass reveal">
+      <h3>Versatile</h3>
+      <p>From simple ID photos to grand celebrations — we’ve got you covered.</p>
+    </div>
+    <div class="card glass reveal delay-1">
+      <h3>Heartfelt</h3>
+      <p>Special creative edits to include loved ones who’ve passed — always with respect.</p>
+    </div>
+    <div class="card glass reveal delay-2">
+      <h3>Reliable</h3>
+      <p>Clear communication, punctual delivery, and consistent quality.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section section-pad alt">
+  <div class="container">
+    <h2 class="section-title reveal">What clients say</h2>
+    <div class="testimonials">
+      <div class="t-card reveal">
+        <p>“Absolutely loved our wedding photos — every emotion captured beautifully.”</p>
+        <span>— Aditi & Karan</span>
+      </div>
+      <div class="t-card reveal delay-1">
+        <p>“Passport photos done in minutes, and the quality was perfect.”</p>
+        <span>— Arjun</span>
+      </div>
+      <div class="t-card reveal delay-2">
+        <p>“The memorial image meant the world to our family. Thank you.”</p>
+        <span>— Nidhi</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA strip -->
+<section class="cta-strip">
+  <div class="container cta-inner">
+    <h3>Ready to make something beautiful?</h3>
+    <a href="{{ url_for('contact') }}" class="btn btn-primary">Get in Touch</a>
+  </div>
+</section>
+
+{% endblock %}

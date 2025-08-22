@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}Services{% endblock %}
+{% block content %}
+<section class="section section-pad">
+  <div class="container">
+    <h1 class="section-title reveal">Our Services</h1>
+    <div class="service-grid">
+      <div class="service-card glass reveal">
+        <h3>Passport / ID Photos</h3>
+        <p>Quick, compliant, flattering lighting.</p>
+      </div>
+      <div class="service-card glass reveal delay-1">
+        <h3>Weddings</h3>
+        <p>Traditional + candid coverage for all ceremonies.</p>
+      </div>
+      <div class="service-card glass reveal delay-2">
+        <h3>Haldi & Reception</h3>
+        <p>Colorful, lively, and emotive moments captured.</p>
+      </div>
+      <div class="service-card glass reveal">
+        <h3>Birthdays & Events</h3>
+        <p>From intimate gatherings to full-scale functions.</p>
+      </div>
+      <div class="service-card glass reveal delay-1">
+        <h3>Family Portraits</h3>
+        <p>Studio or on-location; classic or candid.</p>
+      </div>
+      <div class="service-card glass reveal delay-2">
+        <h3>Creative Designs</h3>
+        <p>Include loved ones respectfully in a single image.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-pad alt">
+  <div class="container">
+    <h2 class="section-title reveal">Simple Pricing</h2>
+    <div class="pricing">
+      <div class="price-card glass reveal">
+        <h4>Essentials</h4>
+        <p class="price">₹₹</p>
+        <ul>
+          <li>Event coverage (2–3 hrs)</li>
+          <li>20 edited photos</li>
+          <li>Online gallery</li>
+        </ul>
+        <a href="{{ url_for('contact') }}" class="btn btn-ghost">Enquire</a>
+      </div>
+      <div class="price-card glass featured reveal delay-1">
+        <h4>Occasion</h4>
+        <p class="price">₹₹₹</p>
+        <ul>
+          <li>Half-day coverage</li>
+          <li>60 edited photos</li>
+          <li>Highlight reel</li>
+        </ul>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary">Most Popular</a>
+      </div>
+      <div class="price-card glass reveal delay-2">
+        <h4>Signature</h4>
+        <p class="price">₹₹₹₹</p>
+        <ul>
+          <li>Full-day + ceremonies</li>
+          <li>150 edited photos</li>
+          <li>Album & film</li>
+        </ul>
+        <a href="{{ url_for('contact') }}" class="btn btn-ghost">Enquire</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

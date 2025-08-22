@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Portfolio{% endblock %}
+{% block content %}
+<section class="section section-pad">
+  <div class="container">
+    <h1 class="section-title reveal">Portfolio</h1>
+    <div class="filters reveal">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="wedding">Wedding</button>
+      <button class="chip" data-filter="event">Events</button>
+      <button class="chip" data-filter="portrait">Portraits</button>
+    </div>
+
+    <div class="grid gallery">
+      <!-- Use your own images in /static/assets and set data-category -->
+      <figure class="g-item reveal" data-category="wedding">
+        <img src="https://picsum.photos/600/400?random=30" alt="Wedding 1">
+      </figure>
+      <figure class="g-item reveal delay-1" data-category="event">
+        <img src="https://picsum.photos/600/400?random=31" alt="Event 1">
+      </figure>
+      <figure class="g-item reveal delay-2" data-category="portrait">
+        <img src="https://picsum.photos/600/400?random=32" alt="Portrait 1">
+      </figure>
+      <figure class="g-item reveal" data-category="wedding">
+        <img src="https://picsum.photos/600/400?random=33" alt="Wedding 2">
+      </figure>
+      <figure class="g-item reveal delay-1" data-category="event">
+        <img src="https://picsum.photos/600/400?random=34" alt="Event 2">
+      </figure>
+      <figure class="g-item reveal delay-2" data-category="portrait">
+        <img src="https://picsum.photos/600/400?random=35" alt="Portrait 2">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Close">×</button>
+  <img class="lightbox-img" alt="">
+</div>
+{% endblock %}
